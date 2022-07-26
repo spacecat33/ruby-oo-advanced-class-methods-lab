@@ -47,7 +47,7 @@ class Song
   # end
 
   def self.new_from_filename(filename)
-    song = self.new
+    song = self.new  #or self.create
     file_name = filename.chomp(".mp3").split(" - ")
     song.name = file_name[1]
     song.artist_name = file_name[0]
@@ -56,11 +56,11 @@ class Song
   
 
   def self.create_from_filename(filename)
-    song = self.create
+    song = self.create   #or self.new
     file_name = filename.chomp(".mp3").split(" - ")
     song.name = file_name[1]
     song.artist_name = file_name[0]
-    @@all << song    #this line is not needed to pass the test
+    # @@all << song    this line is not needed to pass the test because we use self.create within this method. However, if we had used self.new, we would need to add this line to pass the test.
     song
   end
 
