@@ -47,7 +47,7 @@ class Song
   # end
 
   def self.new_from_filename(filename)
-    song = self.new  #or self.create
+    song = self.new  # this test will pass if use self.create with the lasy LOC "song", but not without. Seems incorrect to use self.create as a result?
     file_name = filename.chomp(".mp3").split(" - ")
     song.name = file_name[1]
     song.artist_name = file_name[0]
