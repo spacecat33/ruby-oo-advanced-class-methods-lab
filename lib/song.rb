@@ -61,7 +61,7 @@ class Song
     song.name = file_name[1]
     song.artist_name = file_name[0]
     # @@all << song    this line is not needed to pass the test because we use self.create within this method. However, if we had used self.new, we would need to add this line to pass the test.
-    song
+    # song             as above, this line is not needed to pass the test because we use self.create within this method. However, if we had used self.new, we would need to add this line to pass the test.
   end
 
   def self.destroy_all
